@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar color="danger">
+
+    <ion-title>
+      CART DETAYI
+    </ion-title>
+
+    <ion-button color="dark" size="small" slot="end" [routerLink]="['/home']">
+       <ion-icon name="home"></ion-icon>
+    </ion-button>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="ion-padding">
+    <ion-input [(ngModel)]="cardinfo.number" placeholder="Kart numarısı"></ion-input>
+    <ion-input [(ngModel)]="cardinfo.expMonth" placeholder="Son Kullanma Ay"></ion-input>
+    <ion-input [(ngModel)]="cardinfo.expYear" placeholder="Son Kullanma Yıl"></ion-input>
+    <ion-input [(ngModel)]="cardinfo.cvc" placeholder="cvc"></ion-input>
+    <ion-button expand="full" color="dark" (click)="pay()">
+       Kredi kartı ile öde
+    </ion-button>
+  </div>
+</ion-content>
